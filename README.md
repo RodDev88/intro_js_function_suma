@@ -1,0 +1,1 @@
+En este ejercicio creamos una función que toma dos valores ingresados por el usuario, verifica si son números válidos, los suma si corresponde y muestra el resultado. Si uno o ambos valores no son números, muestra un mensaje de error para guiar al usuario a ingresar datos correctos. Además agregué estilos para ir recordando CSS.
