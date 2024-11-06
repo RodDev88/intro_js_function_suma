@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro JS function sumando</title>
+    <style>
+      /* Asegura que todo el documento use Arial */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f2f5;
+      }
+
+      /* Estilo del contenedor para centrar y darle apariencia de tarjeta */
+      .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+
+      h1,
+      h2 {
+        color: #333333;
+      }
+
+      input {
+        margin-top: 10px;
+        padding: 8px;
+        width: calc(100% - 16px); /* Acomoda el padding */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #sumando {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Intro JS - Function</h1>
+      <h2>Sumar dos números</h2>
+      <p>Introduce dos números</p>
+      <input id="num1" /><br />
+      <input id="num2" />
+      <button type="button" onclick="myFunction()">Sumar</button>
+      <p id="sumando"></p>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x, y, suma, text;
+        x = document.getElementById("num1").value;
+        y = document.getElementById("num2").value;
+
+        if (isNaN(x) || isNaN(y)) {
+          text = "Es necesario introducir dos números válidos";
+        } else {
+          suma = parseFloat(x) + parseFloat(y);
+          text = suma;
+        }
+
+        document.getElementById("sumando").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
